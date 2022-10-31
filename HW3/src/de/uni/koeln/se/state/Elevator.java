@@ -47,8 +47,8 @@ public class Elevator {
 	private void go_up() {
 		
 		
-		if(dest_Floor < 0 || dest_Floor > 10) {
-			System.out.println("Fehler");
+		if(dest_Floor < 0 || dest_Floor > 10) {			//Gebe Fehlermeldung aus, wenn
+			System.out.println("Fehler");				//der Flur nicht vorhanden ist
 			
 		} else {
 			
@@ -72,8 +72,8 @@ public class Elevator {
 	
 	private void go_down() {
 		
-		if(dest_Floor < 0 || dest_Floor > 10) {
-			System.out.println("Fehler");
+		if(dest_Floor < 0 || dest_Floor > 10) {			//Gebe Fehlermeldung aus, wenn
+			System.out.println("Fehler");				//der Flur nicht vorhanden ist
 			
 		} else {
 			
