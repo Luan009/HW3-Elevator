@@ -47,42 +47,51 @@ public class Elevator {
 	private void go_up() {
 		
 		
-		State.Current_State = State.Moving_up;
+		if(dest_Floor < 0 || dest_Floor > 10) {
+			System.out.println("Fehler");
+			
+		} else {
+			
+		current_Floor++;
 
+		State.Current_State = State.Moving_up;
+		System.out.println(State.Current_State);
 		
-		while(current_Floor < dest_Floor) {
+
+		}
+		
+		if(current_Floor < dest_Floor) {
 			
-			if(dest_Floor < 0 || dest_Floor > 10) {
-				System.out.println("Fehler");
-				break;
-			}
-			
-			current_Floor++;
-			System.out.println(State.Current_State);
+			go_up();
 
 		}
 		
 	}
 	
+	
+	
 	private void go_down() {
 		
+		if(dest_Floor < 0 || dest_Floor > 10) {
+			System.out.println("Fehler");
+			
+		} else {
+			
+		current_Floor--;
+
 		
 		State.Current_State = State.Moving_down;
+		System.out.println(State.Current_State);
 
 		
-		while(current_Floor > dest_Floor) {
-			
-			if(dest_Floor < 0 || dest_Floor > 10) {
-				System.out.println("Fehler");
-				break;
+		if(current_Floor > dest_Floor) {
+		
+			go_down();
+
 			}
-			
-			
-			current_Floor--;
-			System.out.println(State.Current_State);
 
+		
 		}
-
 		
 	}
 	
